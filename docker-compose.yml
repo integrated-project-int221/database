@@ -9,3 +9,5 @@ services:
     - "3306:3306"
    networks:
     - myproduct-network
+networks:
+  myproduct-network:
