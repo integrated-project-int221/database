@@ -7,7 +7,9 @@ services:
     - ./data-sys:/var/lib/mysql
    ports:
     - "3306:3306"
-   networks:
-    - myproduct-network
+#    networks:
+#     - myproduct-network
 networks:
-  myproduct-network:
+  default:
+    external:
+      name: myproduct-network:
