@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql-server:
+   build: .
+   container_name: mysql-server
+   volumes:
+    - ./data-sys:/var/lib/mysql
+    - ./conf-sys/my.cnf:/etc/my.cnf
+networks:
+  default:
+    external:
+      name: database_myproduct-network
+
